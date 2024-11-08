@@ -1,7 +1,11 @@
-import express  from 'express'
-import productsRouter from './routes/products/index'    
-const app = express()
+import express, { json, urlencoded }  from 'express'
+import productsRouter from './routes/products/index'   
+
 const port = 3000
+
+const app = express()
+app.use(urlencoded({ extended: true }))
+app.use(json())
 
 app.get('/', (req, res) => {
   res.send('Hello Worldfgf!')

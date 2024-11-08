@@ -11,6 +11,7 @@ export function listProducts  (req: Request, res: Response) {
 
 
   export function createProducts  (req: Request, res: Response) {
+    console.log(req.body)
     res.send('createProducts!')
   } 
 
